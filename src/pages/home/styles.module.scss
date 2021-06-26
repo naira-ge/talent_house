@@ -1,0 +1,10 @@
+.homeContainer{
+  display: grid;
+  overflow: hidden;
+  width: 100%;
+  grid-template-columns: 1fr 3fr 1.5fr;
+  grid-template-rows: auto 1fr auto;
+  height: calc(100vh-70px);
+}
+
+

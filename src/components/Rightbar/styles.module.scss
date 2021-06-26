@@ -1,0 +1,148 @@
+.rightbar{
+    width:100%;
+    height:calc(100vh - 90px);
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin: 1rem 0;
+}
+.rightbarWrapper{
+    padding: 0 .5rem;
+}
+
+.jobsContainer{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+.rightbarButton{
+    width:15vmin;
+    border:none;
+    padding:.5rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    color:rgba(26, 26, 80, 0.7);
+    margin-bottom:.8rem;
+}
+
+.jobImg{
+    max-width: 40%;
+    object-fit: cover;
+}
+
+.jobsText{
+    font-weight: 800;
+    line-height:1.2rem;
+    color:rgba(30, 30, 85, 0.897);
+    padding-bottom:1rem;
+}
+
+.jobsWrapper{
+    overflow-y: scroll;
+    height:54vh;
+    width:100%;
+    }
+    
+    ::-webkit-scrollbar{
+        width:6px;
+        cursor:pointer;
+    }
+    
+    ::-webkit-scrollbar-track{
+        background-color: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: rgba(168, 168, 206, 0.925);;
+        border-radius:20px;
+        cursor:pointer;
+    }
+    
+    
+    .jobsList{
+        padding:0;
+        margin:0;
+        list-style: none;
+    }
+    .companyContainer{
+        display: flex;
+        align-items:center;
+        margin-bottom: 1.8rem;
+        color:rgba(27, 27, 75, 0.918);
+    
+    .companyLogo{
+        max-width: 6vmin;
+        max-height: 6vmin;
+        border-radius:50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        margin-right: .5rem;
+    }
+    .companyDesc{
+        padding:0 .5rem;
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+
+        h4{
+            margin:0;
+        }
+        .position{
+            font-weight: 600;
+            color:rgba(60, 60, 126, 0.89)
+        }
+    }
+}
+
+.rightbarTitle{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+
+}
+
+.rightbarTitle, 
+.rightbarTitle{
+    text-align: center;
+}
+
+.rightbarInfo{
+    margin-bottom: 1rem;
+    color:#555;
+
+    .rightbarInfoItem{
+        margin-bottom: .3rem;
+    }
+
+    .rightbarInfoKey{
+        font-weight: 400;
+        margin-right: .5rem;
+        
+    }
+
+    .rightbarInfoValue{
+        font-weight: 600;
+    }
+}
+
+.rightbarFollowings{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rightbarFollowing{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    padding:.9rem;
+    cursor: pointer;
+}
+
+.rightbarFollowingImg{
+    max-width: 8vmin;
+    max-height: 8vmin;
+    object-fit: cover;
+    border-radius: 15%;
+}
