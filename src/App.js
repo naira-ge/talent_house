@@ -1,25 +1,19 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { connect } from "react-redux";
+import Pages from "./Pages.js";
+import TitlePage from "./titlePage.js";
 
-//Pages
-import home from './pages/home/index';
-import login from './pages/Login/index';
-import signup from './pages/signup';
-import profile from './pages/Profile/index';
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-      <Switch>
-        <Route exact path = "/" component = {home}/>
-        <Route exact path = "/login" component = {login}/>
-        <Route exact path = "/signup" component = {signup}/>
-        <Route exact path = "/profile/" component = {profile}/>
-      </Switch>
-      </BrowserRouter>
-    </div>
-  );
+const App = ( props ) => {
+    return(
+        <div>
+           { !props.loginToHomepage.login ? <TitlePage /> : <Pages /> }
+        </div>
+    )
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+    return {
+        loginToHomepage: state.loginToHomepage
+    }
+}
+
+export default connect(mapStateToProps, null)(App);
