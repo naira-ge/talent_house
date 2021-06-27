@@ -1,8 +1,11 @@
 import styles from './styles.module.scss';
 import Link from 'react-router-dom/Link';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { handlelogOut } from "../titlePageComponents/actions/index.js";
 import { FaSearch, FaRegUser, FaFacebookMessenger, FaRegBell, FaHubspot } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ( props ) => {
         return (
             <div className = {styles.navContainer}>
                 <div className = {styles.navLeft}>
@@ -21,12 +24,13 @@ const Navbar = () => {
                 <Link to="/">
                 <div>Job</div>
                 </Link>
-                <Link to="/login">
+                <div onClick={ props.handlelogOut }>Log Out</div>
+                {/* <Link to="/login">
                 <div>Login</div>
                 </Link>
                 <Link to="/signup">
                 <div>SignUp</div>
-                </Link>
+                </Link> */}
                 </div>
                     <div className = {styles.navIcons}>
                         <div className={styles.navIconItem}>
@@ -50,4 +54,12 @@ const Navbar = () => {
         )
 }
 
-export default Navbar
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(
+        {
+            handlelogOut   
+        },
+        dispatch
+    )
+}
+export default connect(null, mapDispatchToProps)(Navbar);

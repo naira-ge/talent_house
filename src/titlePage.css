@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .titlePage {
+    width: 100vw;
+    height: 100vh;
+    /* padding: 5px; */
+    /* min-width: 420px; */
+    position: relative;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  /*   background: dimgray;  */
+    background: #0073B1; 
+    border-radius: 7px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00B1CD;
+  }

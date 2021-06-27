@@ -4,8 +4,9 @@ import Feed from '../Feed/index'
 import Rightbar from '../Rightbar/index'
 import Footer from '../Footer/index'
 import styles from './styles.module.scss'
+import { connect } from "react-redux";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
     <>
     <Navbar />
@@ -17,11 +18,11 @@ const Profile = () => {
             <img className={styles.profileCoverImg} 
             src ="assets/post/3.jpeg" alt ="cover"/>
             <img className={styles.profileUserImg} 
-            src ="assets/person/profile_user5.jpg" alt = "profile"/>
+            src = { props.loginToHomepage.img_url } alt = "profile"/>
             </div>
             <div className={styles.profileInfo}>
-                <h4 className={styles.profileInfoName}>Naira Gezhoyan</h4>
-                <span className={styles.profileInfoDesc}>I like front-end</span>
+                <h4 className={styles.profileInfoName}>{ props.loginToHomepage.username }</h4>
+                <span className={styles.profileInfoDesc}>{ props.loginToHomepage.email }</span>
             </div>
         </div>
         <div className={styles.profileRightBottom}>
@@ -35,4 +36,10 @@ const Profile = () => {
     )
 }
 
-export default Profile
+const mapStateToProps = (state) => {
+    return{
+        loginToHomepage: state.loginToHomepage,
+    }
+} 
+
+export default connect(mapStateToProps, null)(Profile);
