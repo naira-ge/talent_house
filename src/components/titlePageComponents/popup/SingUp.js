@@ -1,7 +1,8 @@
-import "../style/popup.css";
+import styles from './styles.module.scss';
 import { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { FaHubspot } from "react-icons/fa";
 import { closeSignInPopup, openSignInPopup, openSignUpPopup, singUpToHomepage } from "../actions/index.js";
 
 class SignUp extends Component {
@@ -107,26 +108,48 @@ class SignUp extends Component {
 
    render() {
      return(
-        <div className="signUp-container">
-           <div className="signUp-container-header">
-              <span onClick={ this.props.closeSignInPopup }>X</span>
-              <h1>Sign Up</h1>
-           </div>
-           <form className="form" onSubmit={ this.handleSignInSubmit }>
-              <input type="text" placeholder="Username" onChange={this.changeUsername} value={this.state.unsernameValue}></input>
+      <div className={styles.login}>
+      <div className={styles.signUpContainerHeader}>
+         <span onClick={ this.props.closeSignInPopup }>X</span>
+      </div>
+      <div className={styles.loginWrapper}>
+          <div className={styles.loginLeft} 
+          style={{backgroundImage: `url(/gif/logo.gif)`}}>
+              <h3 className={styles.loginLogo}><FaHubspot /> TalentHouse</h3>
+              <span className={styles.loginDesc}>
+              Connect talented people around the world with the on-demand creative community
+              </span>
+          </div>
+         <div className={styles.loginRight}>
+           <form className={styles.loginBox} 
+           onSubmit={ this.handleSignInSubmit }>
+              <input type="text" placeholder="Username" 
+              onChange={this.changeUsername} 
+              value={this.state.unsernameValue}
+              className={styles.loginInput}></input>
                  <p>{this.state.wrongUsername}</p>
-              <input type="text" placeholder="Email" onChange={this.changeEmail} value={this.state.emailValue}></input>
+              <input type="text" placeholder="Email" 
+              onChange={this.changeEmail} 
+              value={this.state.emailValue}
+              className={styles.loginInput}></input>
                  <p>{this.state.wrongEmail}</p>
-              <input type="password" placeholder="Password" onChange={this.changePassword} value={this.state.passwordValue}></input>
+              <input type="password" placeholder="Password" 
+              onChange={this.changePassword} 
+              value={this.state.passwordValue}
+              className={styles.loginInput}></input>
                  <p>{this.state.wrongPassword}</p>
-              <input type="password" placeholder="Confirm Password" onChange={this.changeConfirmPassword}></input>
+              <input type="password" placeholder="Confirm Password" 
+              onChange={this.changeConfirmPassword}
+              className={styles.loginInput}></input>
                  <p>{this.state.wrongConfirmPassword}</p>
-              <button className="btn">Sign Up</button>
+              <button className={styles.loginButton}>Sign Up</button>
            </form>
-           <div className="signUp-container-footer">
+           <div className={styles.signUpContainerFooter}>
                <p onClick={ this.props.openSignInPopup }>Already have an account? Sign in</p>
            </div>
        </div>
+      </div>
+   </div>
     )
    }  
 }

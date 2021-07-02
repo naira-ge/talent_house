@@ -1,3 +1,6 @@
+
+@import '../../styles/variables';
+
 .sidebar{
     padding:0;
 }
@@ -9,22 +12,28 @@
 .sidebarList{
     padding:1rem 1.5rem;
     list-style: none;
-    border-radius: 1rem;
+    border-radius: $radius;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     margin: .5rem 0;
+    height: 44vmin;
 
     .sidebarListItem{
         display: flex;
         align-items: center;
-        margin-bottom: 1.3rem;
+        margin-bottom: 1.5rem;
         cursor: pointer;
     }
     .sidebarIcon{
         margin-right:1.1rem;
-        font-size:1.3rem;
-        color:rgba(53, 60, 121, 0.9);
+        font-size:1.5rem;
+        color:rgba(30, 37, 107, 0.9);
         cursor: pointer;
+    }
+    .sidebarListItemText{
+        font-size:1rem;
+        color:rgba(20, 27, 94, 0.9);
+        font-weight: 500;
     }
 }
 
@@ -35,7 +44,7 @@
 .sidebarUserWrapper{
     width:100%;
     color:rgba(27, 27, 75, 1);
-    border-radius: 1rem;
+    border-radius: $radius;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     .sidebarUserTitle{

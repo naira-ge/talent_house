@@ -1,21 +1,13 @@
-.login{
-    width: 100vw;
-    height: 100vh;
-    background-color: #f0f2f5;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
 
 a{
     text-decoration: none;
 }
 
 .loginWrapper{
-    width:60%;
-    height:70%;
+    width:100%;
+    height:100%;
     display:flex;
-    background: linear-gradient(rgba(16, 17, 49, 1),rgba(124, 144, 255, 0.897));
+    background: linear-gradient(rgba(16, 17, 49, 1),rgba(28, 55, 211, 0.897));
     border-radius:1.5rem;
     -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.68);

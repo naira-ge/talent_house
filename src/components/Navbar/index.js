@@ -1,16 +1,17 @@
-import styles from './styles.module.scss';
-import Link from 'react-router-dom/Link';
+import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { handlelogOut } from "../titlePageComponents/actions/index.js";
-import { FaSearch, FaRegUser, FaFacebookMessenger, FaRegBell, FaHubspot } from "react-icons/fa";
+import { FaSearch,  FaHubspot } from "react-icons/fa";
+import { GoBriefcase, GoTerminal } from "react-icons/go";
+import styles from './styles.module.scss';
 
 const Navbar = ( props ) => {
         return (
             <div className = {styles.navContainer}>
                 <div className = {styles.navLeft}>
                 <Link to="/">
-                <span className = {styles.logo}><FaHubspot /> TalentHouse</span>
+                <span className = {styles.logo}><FaHubspot className = {styles.logoImg}/> TalentHouse</span>
                 </Link>
                 </div>
                 <div className = {styles.navCenter}>
@@ -18,21 +19,35 @@ const Navbar = ( props ) => {
                         <FaSearch className = {styles.searchIcon}/>
                         <input placeholder = "Search" type = {styles.searchInput}></input>
                     </div>
+                    <Link to="/">
+                    <div className={styles.navIconItem}>
+                    <GoBriefcase className = {styles.logoJob}/>
+                    </div>
+                    </Link>
+                    <Link to="/comments">
+                    <div className={styles.navIconItem}>
+                    <GoTerminal className = {styles.logoJob}/>
+                    </div>
+                    </Link>
                 </div>
                 <div className = {styles.navRight}>
                 <div className ={styles.navMenu}>
-                <Link to="/">
-                <div>Job</div>
-                </Link>
-                <div onClick={ props.handlelogOut }>Log Out</div>
-                {/* <Link to="/login">
-                <div>Login</div>
-                </Link>
-                <Link to="/signup">
-                <div>SignUp</div>
-                </Link> */}
+                <div className ={styles.userInfo}>
+                <span className={styles.profileInfoName}>{ props.loginToHomepage.username }</span>
+                <Link to="/profile">
+                <div className={styles.navImgContainer}>
+                <img src = { props.loginToHomepage.img_url } alt = "user" className={styles.navImg} />
                 </div>
-                    <div className = {styles.navIcons}>
+                </Link>
+                </div>
+                <div onClick={ props.handlelogOut }>Log Out</div>
+                </div>
+                </div>
+               {/* <div className = {styles.navIcons}>
+                        <div className={styles.navIconItem}>
+                            <FaBriefcase />
+                            <span className= {styles.navIconBadge}>1</span>
+                        </div>
                         <div className={styles.navIconItem}>
                             <FaRegUser />
                             <span className= {styles.navIconBadge}>1</span>
@@ -45,14 +60,16 @@ const Navbar = ( props ) => {
                             <FaRegBell />
                             <span className= {styles.navIconBadge}>3</span>
                         </div>
-                </div>
-                <Link to="/profile">
-                <img src ="assets/person/default_man.jpg" alt = "user" className={styles.navImg} />
-                </Link>
-                </div>
+                </div>*/}
             </div>
         )
 }
+
+const mapStateToProps = (state) => {
+    return{
+        loginToHomepage: state.loginToHomepage,
+    }
+} 
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(
@@ -62,4 +79,4 @@ const mapDispatchToProps = (dispatch) => {
         dispatch
     )
 }
-export default connect(null, mapDispatchToProps)(Navbar);
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

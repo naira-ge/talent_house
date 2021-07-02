@@ -20,15 +20,12 @@ export const closeSignInPopup = () => {
 }
 
 export const loginToHomepage = (email, password) => (dispatch) => {
-    console.log(email, password)
     fetch(URL)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         data.map((user) => {
-            console.log(user.email, user.password)
             if(user.email === email && user.password === password) {
-                console.log("stacvec")
+                console.log("login done")
                 dispatch({
                     type: LOGIN_TO_HOMEPAGE,
                     payload: user

@@ -1,6 +1,8 @@
+@import '../../styles/variables';
+
 .post{
     width:100%;
-    border-radius: 1rem;
+    border-radius: $radius;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     margin: 1rem 0;
@@ -18,8 +20,8 @@
 
 .postTopLeft{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    flex-flow:column nowrap;
 
 .postProfileImg{
     max-width: 7vmin;
@@ -40,8 +42,42 @@
 }
 }
 
+.postTitle{
+    display:flex;
+    justify-content:space-between;
+
+    & span {
+    color:$clr-primary-1;
+    font-weight: 400;
+    font-size: .9rem;
+    margin:.3rem .2rem;
+}
+
+}
+
+.place {
+    color:$clr-primary-4;
+    font-weight: 800;
+    font-size: 1rem;
+    margin:.2rem .2rem;
+}
+
+
+.postTitleName{
+    display:flex;
+    justify-content:space-between;
+    color:$clr-grey-4;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin:.4rem .2rem;
+    
+}
+
+
 .postCenter{
-    margin:1rem 0;
+    margin:1.5rem 0.3rem;
+    color:$clr-grey-1;
+    font-weight: 500;
 }
 
 .postImg{
@@ -54,7 +90,8 @@
 .postButton{
     display:flex;
     align-items: center;
-    justify-content:space-between;
+    padding:.5rem .3rem;
+    border-top: 1px solid lightgrey;
 }
 
 .postButtonLeft{

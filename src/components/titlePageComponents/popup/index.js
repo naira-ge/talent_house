@@ -1,4 +1,4 @@
-import "../style/popup.css";
+import styles from './styles.module.scss';
 import SignUp from "./SingUp.js";
 import { connect } from "react-redux";
 import SignIn from "./SignIn.js";
@@ -6,7 +6,7 @@ import SignIn from "./SignIn.js";
 
 const Popup = ( props ) => {
     return(
-        <div className="popup">
+        <div className={styles.popup}>
             { props.popupHandler.signUpPopup ? <SignUp /> : null}
             { props.popupHandler.signInPopup ? <SignIn /> : null}
         </div>

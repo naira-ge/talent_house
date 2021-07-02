@@ -1,19 +1,23 @@
-import "../style/header.css";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { openSignUpPopup, openSignInPopup } from "../actions/index.js";
+import {  FaHubspot } from "react-icons/fa";
+import styles from '../style/styles.module.scss'
+
 
 const Header = (props) => {
     return(
-        <div className="header">
-            <div className="logo">
-                <p>Talent House</p>
-            </div>
-            <div className="signIn_signUp_container">
-                <p  onClick={ props.openSignUpPopup }>Sign Up</p>
-                <span>/</span>
-                <p onClick={ props.openSignInPopup }>Sign In</p>
-            </div>
+        <div className = {styles.navContainer}>
+                <div className = {styles.navLeft}>
+                <span className = {styles.logo}><FaHubspot className = {styles.logoImg}/> TalentHouse</span>
+                </div>
+                <div className = {styles.navRight}>
+                <div className ={styles.navMenu}>
+                    <p  onClick={ props.openSignUpPopup }>Sign Up</p>
+                    <span>/</span>
+                    <p onClick={ props.openSignInPopup }>Sign In</p>
+                    </div>
+                </div>
         </div>
     )
 }

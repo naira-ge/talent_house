@@ -1,15 +1,15 @@
-import "./titlePage.css";
-import Header from "../src/components/titlePageComponents/header/index.js";
-import Content from "../src/components/titlePageComponents/content/index.js";
-import Footer from "../src/components/titlePageComponents/footer/index.js";
-import Popup from '../src/components/titlePageComponents/popup/index.js';
+import Header from "../header/index.js";
+import Content from "../content/index.js";
+import Footer from "../footer/index.js";
+import Popup from '../popup/index.js';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { openSignUpPopup } from "../src/components/titlePageComponents/actions/index.js";
+import { openSignUpPopup } from "../actions/index.js";
+import styles from './styles.module.scss';
 
 function TitlePage(props) {
   return (
-    <div className="titlePage">
+    <div className={styles.titlePage}>
        <Header />
        <Content />
        <Footer />

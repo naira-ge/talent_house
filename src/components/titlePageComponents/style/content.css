@@ -1,31 +1,35 @@
 .content-wrapper{
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 115px);
 }
 
 .content-wrapper-top{
     width: 100%;
-    height: 50%;
+    height:50%;
     display: flex;
-    padding: 3%;
 }
 
 .content-wrapper-text{
     height: 100%;
     width: 50%;
-    padding: 3% 10%;
+    padding: 6%;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
 .content-wrapper-text h3 {
-    color: #0073B1;
+    color: rgba(28, 55, 211, 0.897);
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px rgb(125, 129, 253);
 }
 
 .content-wrapper-top-image{
-    height: 100%;
     width: 50%;
+    margin:0.1% 0;
+    object-fit: cover;
     background-image: url("../images/find-job1.png");
     background-repeat: no-repeat;
     background-size: cover;

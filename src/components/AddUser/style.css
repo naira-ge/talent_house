@@ -1,0 +1,222 @@
+.carousel{
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    overflow: hidden;
+    background-color:antiquewhite; 
+ } 
+ .carouselInner{
+    width:350px;
+    height:350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    transition-duration: 1s ease;
+    transition-duration: 1s;
+    transform:scal(1.08); 
+    border-radius:50%;
+    position:absolute;
+    border: 4px solid var(--clr-grey-8);
+    box-shadow: var(--dark-shadow);
+    margin:148px;
+  
+   
+}
+
+.about{
+    padding:15px;
+    font-size:25px;
+    color:rgb(75, 75, 104);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position:relative;
+    top:56%;
+    font-weight: lighter;
+    outline: none;
+    border:none;
+    border-radius: 15%;
+    font-style: italic;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+ .left{
+    background-color:none; 
+    color:rgb(26, 17, 17);
+    cursor:pointer;
+    font-size:35px;
+    position:absolute;
+    top:75%;
+    left:40%;
+    color:rgb(121, 121, 184);
+   
+}
+
+
+ .center{
+    width:100%;
+    
+} 
+
+.right{
+    background-color: none; 
+    right:40%;
+    color:rgb(26, 17, 17);
+    cursor:pointer;
+    font-size:35px;
+    top:75%;
+    position:absolute; 
+    color:rgb(121, 121, 184);
+}
+h1{
+    font-size:4rem;
+    padding:1%; 
+    font-size:35px;
+    color:rgb(75, 75, 104);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position:relative;
+    top:53%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: lighter;
+    font-stretch: extra-expanded;
+    cursor:pointer;
+}
+
+ .popUpTable{
+    position:absolute;
+    font-size:27px;
+    background-color:transparent;
+    border-radius:9px; 
+    font-style: italic;
+    padding:8px;
+    color:rgb(121, 121, 184);
+    width:90%;
+    padding:5px;
+    text-align: center;
+    margin:40px;
+    top:78%;
+    font-weight: bolder;
+   
+}
+
+.users{
+    font-size: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position:absolute;
+    left:35%;
+    color:rgb(121, 121, 184);
+
+}
+
+.prof{
+  color:rgb(121, 121, 184);
+}
+
+
+.wrapper{
+    width:100%;
+    height:100%;
+    background-color:blanchedalmond;
+  
+}
+
+.userinfo{
+    width:50%;
+    background-color:darkgrey;
+    position:absolute;
+    top:65%;
+    left:20%;
+    border:none;  
+    color:rgb(121, 121, 184);
+}
+
+.followers{
+    width:50%;
+    background-color:gainsboro;
+    position:absolute;
+    top:78%;
+    left:20%;
+    color:rgb(51, 51, 90);
+    word-spacing:235px; 
+    font-weight: bold;
+}
+
+.skills{
+    width:35%;
+    background-color:gainsboro;
+    top:85%;
+    left:30%;
+    font-size: 30px;
+    position:absolute;
+    color:rgb(33, 33, 42);
+    
+}
+.secondul{
+    word-spacing:200px;   
+}
+.span{
+    background-color:honeydew;
+    position:absolute;
+    color:rgb(33, 33, 42);
+    font-weight: bolder;
+    font-size:100px;
+    bottom:10%;
+
+}
+
+.img2{
+    width:350px;
+    height:350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    transition-duration: 1s ease;
+    transition-duration: 1s;
+    transform:scal(1.08); 
+    border-radius:50%;
+    position:absolute;
+    border: 4px solid var(--clr-grey-8);
+    box-shadow: var(--dark-shadow);
+    top:40%;
+    left:40%;
+}
+
+
+.img1{
+    width:50%;
+    height:50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    transition-duration: 1s ease;
+    transition-duration: 1s;
+    transform:scal(1.08); 
+    position:absolute;
+    border: 4px solid var(--clr-grey-8);
+    box-shadow: var(--dark-shadow);
+    margin:148px;
+    left:14.9%;
+}
+
+.imgPreview img{
+    border-radius:50%;
+    width:350px;
+    height:350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    transition-duration: 1s ease;
+    transition-duration: 1s;
+    transform:scal(1.08); 
+    position:absolute;
+    border: 4px solid var(--clr-grey-8);
+    box-shadow: var(--dark-shadow);
+    top:40%;
+    left:40%;
+}

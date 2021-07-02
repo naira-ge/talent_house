@@ -1,8 +1,8 @@
 .footer{
     width: 100%;
-    height: 15%;
-    background-color: #073049;
-    padding: 1%;
+    height: 58px;
+    background:linear-gradient(rgba(28, 55, 211, 0.897), rgba(16, 17, 49, 1));;
+    padding:1%;
 }
 
 .footer h2{
