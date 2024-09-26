@@ -1,13 +1,14 @@
+@import '../../styles/variables';
+
 .rightbar{
-    width:100%;
-    height:calc(100vh - 90px);
-    border-radius: 1rem;
+    width:97%;
+    border-radius: $radius;
     -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
-    margin: 1rem 0;
+    margin: 1rem .4rem;
 }
 .rightbarWrapper{
-    padding: 0 .5rem;
+    padding: 0 .3rem;
 }
 
 .jobsContainer{
@@ -16,19 +17,42 @@
     flex-direction:column;
 }
 
+.follow{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items:center;
+    justify-content:space-between;
+    font-size: .9rem;
+    color:$clr-grey-7;
+    margin-right:.5rem;
+    font-weight: 500;
+    cursor:pointer;
+
+    &:hover {
+        color:$clr-grey-4;
+
+    }
+}
+
 .rightbarButton{
     width:15vmin;
     border:none;
     padding:.5rem;
-    border-radius: 1rem;
+    border-radius: $radius;
     font-weight: 600;
     color:rgba(26, 26, 80, 0.7);
     margin-bottom:.8rem;
 }
 
 .jobImg{
-    max-width: 40%;
+    max-width: 38%;
     object-fit: cover;
+}
+
+.followersImg{
+    max-width: 27%;
+    object-fit: cover;
+    margin:.7rem 0;
 }
 
 .jobsText{
@@ -38,9 +62,20 @@
     padding-bottom:1rem;
 }
 
+.followerText{
+    font-weight: 800;
+    line-height:1.1rem;
+    color:rgba(60, 60, 170, 0.897);
+    padding-bottom:.8rem;
+
+    .github{
+        font-size: 1.3rem;
+        letter-spacing:.5rem;
+    }
+}
+
 .jobsWrapper{
     overflow-y: scroll;
-    height:54vh;
     width:100%;
     }
     
@@ -65,20 +100,40 @@
         margin:0;
         list-style: none;
     }
-    .companyContainer{
-        display: flex;
+    .companyDetails{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
         align-items:center;
-        margin-bottom: 1.8rem;
+        margin-bottom: .5rem;
         color:rgba(27, 27, 75, 0.918);
-    
+
+        a {
+            text-decoration: none;
+            color:$clr-grey-5;
+            font-weight: 600;
+
+            &:hover {
+                color:$clr-grey-3;
+            }
+        }
+
+    .companyLogoContainer {
+        width:12vmin;
+        position:relative;
+        padding-top:12vmin;
+        border-radius:50%;
+        margin:0 1rem;
+    }
+
     .companyLogo{
-        max-width: 6vmin;
-        max-height: 6vmin;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        bottom:0;
         border-radius:50%;
         background-position: center;
         background-repeat: no-repeat;
-        object-fit: cover;
-        margin-right: .5rem;
+        object-fit:scale-down;
     }
     .companyDesc{
         padding:0 .5rem;
@@ -90,9 +145,18 @@
             margin:0;
         }
         .position{
-            font-weight: 600;
-            color:rgba(60, 60, 126, 0.89)
+            font-weight: 700;
+            color:rgba(60, 60, 126, 0.9)
         }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -145,4 +209,8 @@
     max-height: 8vmin;
     object-fit: cover;
     border-radius: 15%;
+}
+
+.containerBtn {
+
 }

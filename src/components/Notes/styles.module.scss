@@ -1,0 +1,189 @@
+@import '../../styles/variables';
+/*
+=============== 
+Notes
+===============
+*/
+
+.sectionNotes {
+    padding:1rem 1.5rem;
+    list-style: none;
+    text-align:center;
+    border-radius: $radius;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin: .5rem 0;
+}
+.sectionNotes:hover {
+  box-shadow: $dark-shadow;
+}
+  .alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    letter-spacing: $spacing;
+    text-transform: capitalize;
+    color:$clr-primary-6;
+  }
+  .alertDanger {
+    color: $clr-red-dark;
+    background: $clr-grey-10;
+  }
+  .alertSuccess {
+    color: $clr-primary-5;
+    background: $clr-grey-10;
+  }
+  .groceryForm h3 {
+    color: $clr-primary-1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .formControl {
+    display: flex;
+    justify-content: center;
+    padding: 0 0.3rem;
+    width: 100%;
+
+    input {
+      border:none;
+      outline:none;
+      font-size: .9rem;
+      font-weight:600;
+      color:rgb(51, 50, 65);
+
+      &:hover{
+        outline:none;
+      }
+    }
+  }
+  .grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: $clr-grey-10;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: $clr-grey-5;
+  }
+  .grocery::placeholder {
+    color: $clr-grey-5;
+  }
+
+  .groceryItemMotes{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .submitBtnNotes {
+    background: $clr-primary-10;
+    border-color: transparent;
+    flex: 0 0 1rem;
+    display: grid;
+    align-items: center;
+    padding: 0.2rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    cursor: pointer;
+    content: $clr-primary-9;
+    transition: $transition;
+    font-size: 0.85rem;
+  }
+  .submitBtnNotes:hover {
+    background: $clr-primary-4;
+    color: $clr-white;
+  }
+  
+  .groceryContainer {
+    margin-top: 1.5rem;
+    padding:1px;
+    width: 109%;
+    height: 45%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;      
+  }
+
+  .groceryItemNotes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 0.5rem;
+    transition: $transition;
+    padding: 0.25rem 1rem;
+    border-radius: $radius;
+    text-transform: capitalize;
+    background: $clr-white
+  }
+  .groceryItemNotes:hover {
+    color: $clr-grey-5;
+    background: $clr-grey-10;
+  }
+  .groceryItemNotes:hover .title {
+    color: $clr-grey-5;
+  }
+  .titleNotes {
+    margin-bottom: 0;
+    color: $clr-grey-2;
+    letter-spacing: 1px;
+    transition: $transition;
+    margin-right:.5rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+  }
+  .editBtnNotes,
+  .deleteBtnNotes {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 0.15rem;
+    transition: $transition;
+  }
+  .editBtnNotes {
+    color: $clr-primary-6;
+  }
+  .editBtnNotes:hover {
+    color: $clr-primary-3;
+    transition: $transition;
+  }
+  .deleteBtnNotes {
+    color: $clr-grey-6;
+  }
+  .deleteBtnNotes:hover {
+    color: $clr-grey-3;
+    transition: $transition;
+  }
+  .clearBtnNotes {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background: transparent;
+    border-color: transparent;
+    text-decoration: none;
+    color: $clr-primary-4;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    letter-spacing: $spacing;
+    cursor: pointer;
+    transition: $transition;
+    margin-top: 1.25rem;
+  }
+  .clearBtnNotes:hover {
+    color: $clr-primary-2;
+  }
+  .btnContainerNotes{
+    display:flex;
+    flex-flow: row nowrap;
+    margin:.3rem .7rem;
+  }

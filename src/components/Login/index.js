@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import { FaHubspot } from "react-icons/fa"
-import Link from 'react-router-dom/Link';
+import { NavLink } from "react-router-dom";
 
 const AccountLogin = () =>{
     return(
@@ -14,9 +14,9 @@ const AccountLogin = () =>{
         <button className={styles.loginButton}>Log In</button>
         <div className={styles.loginButtonContainer}>
         <p className={styles.loginForgot}>Forgot Password ?</p>
-        <Link to="/signup">
+        <NavLink require to="/signup">
         <button className={styles.loginRegisterButton}>Create a New Account</button>
-        </Link>
+        </NavLink>
         </div>
     </div>
     )
@@ -39,9 +39,9 @@ const CreateAccount = () => {
         placeholder = "Re-enter password" />
         <button className={styles.loginButton}>Sign Up</button>
         <div className={styles.loginButtonContainer}>
-        <Link to="/login">
+        <NavLink require to="/login">
         <button className={styles.loginRegisterButton}>Log into Account</button>
-        </Link>
+        </NavLink>
         </div>
     </div>
     )
